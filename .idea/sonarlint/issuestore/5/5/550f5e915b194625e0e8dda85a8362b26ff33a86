@@ -1,0 +1,7 @@
+
+Ysquid:S1854"";Remove this useless assignment to local variable "ratings".(Û³ßÕ8‚þÏ·û,
+ysquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(úá£‡8öíž¶û,
+Fsquid:S1148'"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8þÿÔ·û,
+dsquid:S2142&"FEither re-interrupt this method or rethrow the "InterruptedException".(ä ¹€8þÿÔ·û,
+Jsquid:S1481"",Remove this unused "ratings" local variable.(Û³ßÕ8‚þÏ·û,
+nsquid:CommentedOutCodeLine+"<This block of commented-out lines of code should be removed.(Ž’Íìÿÿÿÿÿ8³µß·û,
