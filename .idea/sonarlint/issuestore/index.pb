@@ -11,3 +11,25 @@ P
  src/main/java/base/BaseTest.java,a/1/a1409c3348e128f6b8de3c422846c43706eff0f8
 =
 walletHub.iml,f/6/f6b2460c7cae0dfe1f2e5045fe3f053c3639bf0e
+Y
+)src/main/java/listeners/EventCapture.java,f/5/f53b670f3ef63ed2f70de3b154a52eece990370b
+S
+#src/main/java/pages/ReviewPage.java,c/9/c9bec416ec76b743e84d4d8c5754c6679141cfe6
+R
+"src/main/java/pages/LoginPage.java,4/b/4bdc7fe650a4170fd3332cdfc4dca51f7507f98b
+T
+$src/main/java/pages/ProfilePage.java,6/e/6e804915e5c0bfbb911d10c63a826e86f5adf23f
+S
+#src/main/java/pages/SignUpPage.java,9/b/9b9764e668234bb8a5954e1e3caaaed4e2d66e3e
+Q
+!src/main/java/pages/HomePage.java,9/6/9655b2a35fae75d92697b79cda62632f93f33e6e
+Y
+)src/main/java/testCases/HomePageTest.java,9/d/9d8e9002c867637f3a642cb5a59e43ac4bd84967
+Z
+*src/main/java/testCases/LoginPageTest.java,0/c/0c735f64823810698b843d57e2d0662735d582e3
+\
+,src/main/java/testCases/ProfilePageTest.java,7/c/7c03807ca40a5673b80916349f64e8ee8e077253
+[
++src/main/java/testCases/SignUpPageTest.java,1/b/1b544f85cf3bd5659e40971dedc444f56c1c9d58
+[
++src/main/java/testCases/ReviewPageTest.java,9/2/922332c9457175e53e677a1e17bd301007511fa7

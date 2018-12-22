@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="WalletHub Suite">
+    <parameter name="environment" value="qa"/>
+
+
+    <test name="Paramters Test">
+
+        <parameter name="url" value="https://www.gmail.com"/>
+        <parameter name="emailid" value="krt1305@gmail.com"/>
+
+
+        <classes>
+            <class name=""/>
+        </classes>
+    </test> <!-- Test -->
+
+    <test name="Retry Test">
+
+
+
+        <classes>
+            <class name=""/>
+        </classes>
+    </test> <!-- Test -->
+
+
+
+</suite> <!-- Suite -->

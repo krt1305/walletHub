@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+import io.codearte.jfairy.Fairy;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -128,20 +129,29 @@ public class BaseTest {
                         System.out.println("Login button displayed "+ driver.findElement(By.xpath("//a[contains(text(),'Login')]")).isDisplayed());
                         driver.findElement(By.xpath("//a[contains(text(),'Login')]")).click();
                         System.out.println("After clicking login");
+
                 driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
                 driver.findElement(By.xpath("//input[@id='userName']")).clear();
                 driver.findElement(By.xpath("//input[@id='userName']")).sendKeys("purevpn0m7496014");
                 driver.findElement(By.xpath("//input[@id='userPass']")).sendKeys("Password@1305!");
                 driver.findElement(By.xpath("//button[@id='btnLogin']")).click();
                 driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
-                driver.findElement(By.xpath("//button[contains(text(),'Connect')]")).click();
                 WebDriverWait wait=new WebDriverWait(driver,10);
-                wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//button[contains(text(),'Disconnect')]"))));
-
-
-                System.out.println("Out of foor loop");
+                wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@id='loaderOverlay']")));
+                try {
+                    Thread.sleep(10000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                driver.findElement(By.xpath("//button[contains(text(),'Connect')]")).click();
+                //wait=new WebDriverWait(driver,10);
+                try {
+                    Thread.sleep(20000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                //wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//button[contains(text(),'Disconnect')]"))));
                 driver.switchTo().window(originalHandle);
-                driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
                 break;
 
 
@@ -160,12 +170,20 @@ public class BaseTest {
         driver.quit();
     }
 
+    public boolean isPopUpPresent(String xpath)
+    {
+        List<WebElement> elems=driver.findElements(By.xpath(xpath));
+        if(elems.size()>0)
+            return true;
+        else
+            return false;
+    }
 
 
     public boolean doLogin()
     {
 
-        driver.get(prop.getProperty("URL"));
+        driver.get(prop.getProperty("homepageURL"));
         driver.findElement(By.xpath(prop.getProperty("signInLink"))).click();
 
         try {
@@ -198,6 +216,11 @@ public class BaseTest {
 
     }
 
+    public void gotoProfilePage()
+    {
+        driver.get(prop.getProperty("profileURL"));
+    }
+
     public void waitforPagetoLoad() throws InterruptedException
     {
         JavascriptExecutor js=(JavascriptExecutor)driver;
@@ -223,4 +246,6 @@ public class BaseTest {
             return false;
 
     }
+
+
 }
