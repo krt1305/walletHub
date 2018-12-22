@@ -61,6 +61,11 @@
             <version>2.3.2</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-remote-driver</artifactId>
+            <version>3.9.1</version>
+        </dependency>
 
     </dependencies>
 

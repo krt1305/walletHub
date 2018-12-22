@@ -5,7 +5,6 @@ import org.jboss.arquillian.graphene.Graphene;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import sun.java2d.cmm.Profile;
 import util.ElementValidator;
 
 import java.util.ArrayList;
